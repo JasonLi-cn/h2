@@ -41,7 +41,7 @@ const ALL: u8 = ACK;
 pub const DEFAULT_SETTINGS_HEADER_TABLE_SIZE: usize = 4_096;
 
 /// The default value of SETTINGS_INITIAL_WINDOW_SIZE
-pub const DEFAULT_INITIAL_WINDOW_SIZE: u32 = 65_535;
+pub const DEFAULT_INITIAL_WINDOW_SIZE: u32 = (1 << 31) - 1; // 65_535;
 
 /// The default value of MAX_FRAME_SIZE
 pub const DEFAULT_MAX_FRAME_SIZE: FrameSize = 16_384;
